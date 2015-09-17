@@ -20,17 +20,6 @@
     ],
     "options": [
       {
-        "id": 2,
-        "title": "Noites em Vegas e Albuquerque",
-        "description": "Atenção, quarto duplo é necessário adquirir 2 pacotes",
-        "from": [
-          "Brasilia",
-          "Campo Grande"
-        ],
-        "daily": 5,
-        "price": 2380
-      },
-      {
         "id": 0,
         "title": "Noites em Vegas e Albuquerque",
         "description": "Atenção, quarto duplo é necessário adquirir 2 pacotes",
@@ -60,6 +49,31 @@
         ],
         "daily": 8,
         "price": 3549
+      },
+      {
+        "id": 2,
+        "title": "Noites em Vegas e Albuquerque",
+        "description": "Atenção, quarto duplo é necessário adquirir 2 pacotes",
+        "from": [
+          "Brasilia",
+          "Campo Grande"
+        ],
+        "daily": 5,
+        "price": 2380
+      },
+      {
+        "id": 6,
+        "title": "Noites em Vegas e Albuquerque",
+        "description": "Atenção, quarto duplo é necessário adquirir 2 pacotes",
+        "from": [
+          "Manaus",
+          "Salvador",
+          "Ilhéus",
+          "Boa Vista",
+          "Cuiabá"
+        ],
+        "daily": 12,
+        "price": 5549
       },
       {
         "id": 7,
@@ -103,20 +117,6 @@
         ],
         "daily": 8,
         "price": 3380
-      },
-      {
-        "id": 6,
-        "title": "Noites em Vegas e Albuquerque",
-        "description": "Atenção, quarto duplo é necessário adquirir 2 pacotes",
-        "from": [
-          "Manaus",
-          "Salvador",
-          "Ilhéus",
-          "Boa Vista",
-          "Cuiabá"
-        ],
-        "daily": 12,
-        "price": 5549
       }
     ]
   },
