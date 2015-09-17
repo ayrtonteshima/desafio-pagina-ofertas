@@ -1,0 +1,17 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width')
+    link(href="/img/favicon.ico" type="image/x-icon" rel="shortcut icon")
+    title Desafio Hotel Urbano
+    block css
+      link(rel='stylesheet', href='/css/style.css')
+      link(rel='stylesheet', href='/components/slick-carousel/slick/slick.css')
+    block js
+      if ENV_DEVELOPMENT
+        script(src='http://localhost:35729/livereload.js')
+      script(src='/js/main.bundle.js')
+
+  body
+    block content

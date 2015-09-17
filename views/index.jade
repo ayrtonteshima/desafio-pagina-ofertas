@@ -1,0 +1,143 @@
+extends layout
+
+block content
+
+	script(id="tpl_option" type="text/x-handlebars-template")
+		article.option
+			.col.col5
+				strong {{ title }}
+				span.text {{ description }}
+			.col.col2
+				span.bold Saídas:
+				ul
+					{{#each from}}
+					li.text {{ this }}
+					{{/each}}
+
+			.col.col2.col-num-3.alignCenter
+
+				span.bold {{ daily }}
+					span.ico.ico-daily
+				small Diárias
+
+				span.dash
+
+				span.bold 1
+					span.ico.ico-people
+				small Pessoa
+
+			.col.col3
+				span.alert.alert-primary $ Cancelamento grátis
+
+				span.text Por apenas
+					em.bold 
+						small R$ 
+						| {{ price }}
+					| + taxas em até 10x 
+
+
+				button(type="button" class="btn-primary") Quero ir
+
+	.modal-gallery
+		button(type="button").modal-gallery-btn-close Fechar
+		button(type="button").modal-gallery-btn-right.modal-gallery-btn
+		button(type="button").modal-gallery-btn-left.modal-gallery-btn
+
+		.modal-gallery-container
+			img(src!="#{photos[0]}")
+
+		.modal-gallery-thumbs
+			ul
+				-for (var i = 0; i < photos.length; i++)
+					li.modal-gallery-thumb
+						span.thumb
+							img(data-src!="#{photos[i]}" src="#{photos[i]}", alt="")
+
+	.container
+		header.topo
+			h3= title
+			em= location
+			span= description
+
+		section.gallery
+			.container-banners
+				.btn-left
+				.btn-right
+				.container-full-banners
+					-for (var i = 0; i < photos.length; i++)
+						figure
+							img(src!="#{photos[i]}", alt="")
+							figcaption Legenda
+			.container-thumbs
+				ul
+					li.active
+						span.thumb.more-photos
+							img(src!="#{photos[0]}", alt="")
+					-for (var j = 1; j < photos.length; j++)
+						if j < 9
+							li
+								span.thumb
+									img(src!="#{photos[j]}", alt="")
+
+					
+					li
+						span.thumb.more-photos(style="content:'2'")
+							if photos.length > 10
+								div +
+									!= photos.length-10
+							img(src!="#{photos[9]}", alt="")
+
+			
+		section.options
+			header
+				span.title-options Escolha sua melhor opção
+				.selects
+					label 
+						span Saídas
+						select.combo_filter(name="combo_from" data-field="from" id="combo_from")
+							option(value="-1" disabled="disabled") Escolha
+
+					label 
+						span Nº de diárias
+						select.combo_filter(name="combo_daily" data-field="daily" id="combo_daily")
+							option(value="-1" disabled="disabled") Escolha
+
+
+			section.list-options
+				//- -for(var i = 0; i < 5; i++)
+					article.option
+						.col.col5
+							strong Noites em Lisboa + noites em Veneza
+							span.text Atenção quarto duplo é necessário adquirir 2 pacotes
+						.col.col2
+							span.bold Saídas:
+							ul
+								li.text Manaus
+								li.text Rio de Janeiro
+
+						.col.col2.col-num-3.alignCenter
+
+							span.bold 3
+								span.ico.ico-daily
+							small Diárias
+
+							span.dash
+
+							span.bold 1
+								span.ico.ico-people
+							small Pessoa
+
+						.col.col3
+							span.alert.alert-primary $ Cancelamento grátis
+
+							span.text Por apenas
+								em.bold 
+									small R$ 
+									| 2.549
+								| + taxas em até 10x 
+
+
+							button(type="button" class="btn-primary") Quero ir
+					
+
+

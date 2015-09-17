@@ -1,0 +1,13 @@
+{
+  "name": "desafio-hotel-urbano",
+  "version": "0.0.1",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "devDependencies": {
+    "neat": "~1.7.2",
+    "slick-carousel": "~1.5.8"
+  }
+}
